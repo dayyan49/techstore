@@ -11,6 +11,7 @@ Technologies Used
   CSS3
   JavaScript
 
+<img width="1588" height="2065" alt="preview" src="https://github.com/user-attachments/assets/659429aa-ae4a-449b-99d6-2049cc720c2c" />
 
 
   

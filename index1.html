@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechStore - Premium Electronics</title>
+    <link rel="stylesheet" href="styles1.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">TechStore</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 Cart <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h1>Premium Electronics</h1>
+      <p>Discover the latest technology at unbeatable prices</p>
+    </section>
+
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        onkeyup="searchProducts()"
+      />
+      <button class="search-btn" onclick="searchProducts()">🔍</button>
+    </div>
+
+    <div class="category-filter">
+      <button class="filter-btn active" onclick="filterByCategory('all')">
+        All
+      </button>
+      <button class="filter-btn" onclick="filterByCategory('audio')">
+        Audio
+      </button>
+      <button class="filter-btn" onclick="filterByCategory('wearables')">
+        Wearables
+      </button>
+      <button class="filter-btn" onclick="filterByCategory('computers')">
+        Computers
+      </button>
+      <button class="filter-btn" onclick="filterByCategory('mobile')">
+        Mobile
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h2>Shopping Cart</h2>
+          <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-total" id="cartTotal">Total: ₹0.00</div>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TechStore</h3>
+          <p>Your trusted electronics retailer</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechStore. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script1.js"></script>
+  </body>
+</html>
